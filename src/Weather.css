@@ -25,11 +25,16 @@
   list-style: none;
 }
 
+.Weather .icon-temperature{
+  display: flex;
+  justify-content: left;
+  
+}
 .Weather canvas {
-  width: 64px;
-  height: 64px;
-  position: relative;
-  bottom: -5px;
+  width: 52px;
+  height: 52px;
+  display: block;
+  margin-right: 10px;
 }
 
 .Weather .temperature {
@@ -41,7 +46,7 @@
 
 .Weather .unit {
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   position: relative;
   line-height: 1;
