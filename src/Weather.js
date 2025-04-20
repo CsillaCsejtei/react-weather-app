@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
-  const [weatherData, setWeatherData] = useState({ready: false});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
@@ -20,18 +20,18 @@ export default function Weather(props) {
     });
   }
 
-  function search(){
-      const apiKey = "f09d3949047ab6c9e3bcaf79cf61f619";
-      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-      axios.get(apiUrl).then(handleResponse);
+  function search() {
+    const apiKey = "f09d3949047ab6c9e3bcaf79cf61f619";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
-  function handleSubmit(event){
+  function handleSubmit(event) {
     event.preventDefault();
     search(city);
   }
 
-  function handleCityChange(event){
+  function handleCityChange(event) {
     setCity(event.target.value);
   }
 
@@ -58,8 +58,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo data={weatherData}/>
-       
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {

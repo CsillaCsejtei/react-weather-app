@@ -6,9 +6,8 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-      
-        <Weather defaultCity="Budapest"/>
-     
+        <Weather defaultCity="Budapest" />
+
         <footer>
           This project was coded by Csilla Csejtei and is{" "}
           <a
@@ -23,5 +22,3 @@ export default function App() {
     </div>
   );
 }
-
-
